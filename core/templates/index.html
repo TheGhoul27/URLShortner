@@ -3,6 +3,7 @@
 {% block content %}
     <h1 class="text-center mb-3">{% block title %} Welcome to URL Shortener {% endblock %}</h1>
     <div class="row">
+        <h2 class="text-center mb-3">Paste the URL to be Shortened</h2>
         <div class="col-md-2"></div>
         <div class="col-md-8">
             <form method="post" action="{{url_for('index')}}">
@@ -18,6 +19,9 @@
                     value="{{ request.form['custom_id'] }}"></input>
                 <label for="custom_id">Custom Short ID</label>
             </div>
+
+            <div class="form-text text-muted">My project is a free tool to shorten a URL or reduce a link</div>
+            <div class="form-text text-muted">Use our URL Shortener to create a shortened link making it easy to remember</div>
 
             <div class="form-group text-center">
                 <button type="submit" class="btn btn-lg btn-primary">Shorten</button>
